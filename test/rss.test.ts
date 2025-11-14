@@ -57,6 +57,33 @@ describe("RSS and Atom generation", () => {
     expect(xml).toContain("Motionister skal kunne trække en del af motionsregningen fra i skat");
   });
 
+  it("orders items newest first regardless of input order", () => {
+    const items = loadFixture("ordering-response.json");
+    expect(items.length).toBe(3);
+
+    // Intentionally provide items in oldest-first order by reversing the
+    // fixture array (which is defined newest-first).
+    const input = [...items].reverse();
+
+    const feed: FeedConfig = {
+      id: "https://example.com/atom.xml",
+      title: "Order test feed",
+      description: "Order description",
+      link: "https://example.com/rss.xml",
+      language: "da-dk",
+    };
+
+    const rssXml = buildRss2(feed, input);
+    const atomXml = buildAtom(feed, input);
+
+    // The first <item>/<entry> should be the newest item.
+    expect(rssXml.indexOf("Newest item")).toBeLessThan(rssXml.indexOf("Middle item"));
+    expect(rssXml.indexOf("Middle item")).toBeLessThan(rssXml.indexOf("Oldest item"));
+
+    expect(atomXml.indexOf("Newest item")).toBeLessThan(atomXml.indexOf("Middle item"));
+    expect(atomXml.indexOf("Middle item")).toBeLessThan(atomXml.indexOf("Oldest item"));
+  });
+
   it("can generate full RSS and Atom feeds from full-response", () => {
     const items = loadFixture("full-response.json");
     expect(items.length).toBeGreaterThan(0);

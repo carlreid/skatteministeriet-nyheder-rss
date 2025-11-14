@@ -21,7 +21,10 @@ function mapItemToRss(item: SkmItem) {
 }
 
 export function buildRss2(feed: FeedConfig, items: SkmItem[]): string {
-  const channelItems = items.map(mapItemToRss).map((i) => ({ item: i }));
+  const sortedItems = [...items].sort((a, b) =>
+    a.date < b.date ? 1 : a.date > b.date ? -1 : 0,
+  );
+  const channelItems = sortedItems.map(mapItemToRss).map((i) => ({ item: i }));
 
   const root = create({
     version: "1.0",
@@ -58,7 +61,12 @@ export function buildRss2(feed: FeedConfig, items: SkmItem[]): string {
 }
 
 export function buildAtom(feed: FeedConfig, items: SkmItem[]): string {
-  const updated = items[0]?.updateDate || items[0]?.date || new Date().toISOString();
+  const sortedItems = [...items].sort((a, b) =>
+    a.date < b.date ? 1 : a.date > b.date ? -1 : 0,
+  );
+
+  const updated =
+    sortedItems[0]?.updateDate || sortedItems[0]?.date || new Date().toISOString();
 
   const root = create({ version: "1.0", encoding: "UTF-8" })
     .ele("feed", { xmlns: "http://www.w3.org/2005/Atom" })
@@ -74,7 +82,7 @@ export function buildAtom(feed: FeedConfig, items: SkmItem[]): string {
     .ele("link", { href: feed.link })
     .up();
 
-  for (const item of items) {
+  for (const item of sortedItems) {
     const entry = root.ele("entry");
     entry
       .ele("id")

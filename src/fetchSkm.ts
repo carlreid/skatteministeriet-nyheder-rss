@@ -34,8 +34,5 @@ export async function fetchSkmItems(): Promise<SkmItem[]> {
     ? json.filter((item) => item && typeof item.url === "string" && item.url.length > 0)
     : [];
 
-  // Sort newest first by date
-  items.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
-
   return items;
 }

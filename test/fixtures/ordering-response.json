@@ -1,0 +1,77 @@
+[
+  {
+    "0": {
+      "id": "oldest-da-dk",
+      "gId": "goldest",
+      "articleId": "",
+      "domainName": "https://example.com/",
+      "types": ["Nyhed"],
+      "tags": [],
+      "expirationDate": "0001-01-01T00:00:00Z",
+      "parentId": 0,
+      "parentGId": "parent",
+      "contentImage": "",
+      "date": "2025-01-01T00:00:00Z",
+      "description": "",
+      "seoDescription": "",
+      "seoTitle": "",
+      "title": "Oldest item",
+      "url": "https://example.com/oldest",
+      "culture": "da-dk",
+      "siteName": "SKM",
+      "oid": "",
+      "createDate": "2025-01-01T00:00:00Z",
+      "updateDate": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "0": {
+      "id": "middle-da-dk",
+      "gId": "gmiddle",
+      "articleId": "",
+      "domainName": "https://example.com/",
+      "types": ["Nyhed"],
+      "tags": [],
+      "expirationDate": "0001-01-01T00:00:00Z",
+      "parentId": 0,
+      "parentGId": "parent",
+      "contentImage": "",
+      "date": "2025-06-01T00:00:00Z",
+      "description": "",
+      "seoDescription": "",
+      "seoTitle": "",
+      "title": "Middle item",
+      "url": "https://example.com/middle",
+      "culture": "da-dk",
+      "siteName": "SKM",
+      "oid": "",
+      "createDate": "2025-06-01T00:00:00Z",
+      "updateDate": "2025-06-01T00:00:00Z"
+    }
+  },
+  {
+    "0": {
+      "id": "newest-da-dk",
+      "gId": "gnewest",
+      "articleId": "",
+      "domainName": "https://example.com/",
+      "types": ["Nyhed"],
+      "tags": [],
+      "expirationDate": "0001-01-01T00:00:00Z",
+      "parentId": 0,
+      "parentGId": "parent",
+      "contentImage": "",
+      "date": "2025-12-01T00:00:00Z",
+      "description": "",
+      "seoDescription": "",
+      "seoTitle": "",
+      "title": "Newest item",
+      "url": "https://example.com/newest",
+      "culture": "da-dk",
+      "siteName": "SKM",
+      "oid": "",
+      "createDate": "2025-12-01T00:00:00Z",
+      "updateDate": "2025-12-01T00:00:00Z"
+    }
+  }
+]
