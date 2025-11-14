@@ -1,0 +1,27 @@
+[
+  {
+    "0": {
+      "id": "18695-da-dk",
+      "gId": "bfb17809892c4778b623b9d51563dc12",
+      "articleId": "",
+      "domainName": "https://skm.dk/",
+      "types": ["Nyhed"],
+      "tags": ["Fradrag"],
+      "expirationDate": "0001-01-01T00:00:00",
+      "parentId": 5743,
+      "parentGId": "51a1724283c9426da86a277c0d1359e9",
+      "contentImage": "/media/Skatteministeriet/Presse/Pressebilleder/Illustrationsfotos/motionsloeb.jpg",
+      "date": "2025-10-28T00:00:00Z",
+      "description": "Det følger af finanslovsaftalen for 2026, at danskerne skal kunne få fradrag for at dyrke motion i fx et fitnesscenter og for undervisning i sang og musik.",
+      "seoDescription": "",
+      "seoTitle": "",
+      "title": "Motionister skal kunne trække en del af motionsregningen fra i skat",
+      "url": "https://skm.dk/aktuelt/presse-nyheder/nyheder/motionister-skal-kunne-traekke-en-del-af-motionsregningen-fra-i-skat-1",
+      "culture": "da-dk",
+      "siteName": "SKM",
+      "oid": "",
+      "createDate": "2025-10-28T15:12:44.58Z",
+      "updateDate": "2025-11-03T10:50:25.74Z"
+    }
+  }
+]

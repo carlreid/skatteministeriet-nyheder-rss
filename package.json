@@ -1,0 +1,23 @@
+{
+  "name": "skatteministeriet-nyheder-rss",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p .",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "format": "biome check --write"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "xmlbuilder2": "^4.0.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/node": "^22.19.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "vitest": "^2.1.9"
+  }
+}
